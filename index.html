@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- htmlaunch:enhanced:v2 -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22hsl(77%2C72%25%2C58%25)%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22hsl(107%2C72%25%2C44%25)%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22url(%23g)%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2246%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2C-apple-system%2CSegoe%20UI%2Csans-serif%22%20font-size%3D%2238%22%20font-weight%3D%22800%22%20fill%3D%22%23ffffff%22%3EL%3C%2Ftext%3E%3C%2Fsvg%3E">
+<meta name="theme-color" content="#277b14">
+<meta name="description" content="Lumi | deployed with HTMLaunch">
+<link rel="canonical" href="https://SleepyPanda87.github.io/lumi/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lumi">
+<meta property="og:title" content="Lumi">
+<meta property="og:description" content="Lumi | deployed with HTMLaunch">
+<meta property="og:url" content="https://SleepyPanda87.github.io/lumi/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2FSleepyPanda87.github.io%2Flumi%2F?w=1200&h=630">
+<meta property="og:image:alt" content="Lumi">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lumi">
+<meta name="twitter:description" content="Lumi | deployed with HTMLaunch">
+<meta name="twitter:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2FSleepyPanda87.github.io%2Flumi%2F?w=1200&h=630">
+<meta name="twitter:image:alt" content="Lumi">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lumi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#DCEBFF; --ink:#1B2559; --ribbon:#E2334B; --sun:#FFC93C; --mint:#3FBF9F; --card:#FFFFFF; --soft:#5A6490;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--sky:#141B3D;--ink:#F1F4FF;--card:#222B57;--soft:#B6BEE6;}
+}
+:root[data-theme="dark"]{--sky:#141B3D;--ink:#F1F4FF;--card:#222B57;--soft:#B6BEE6;}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--sky);color:var(--ink);font-family:"Nunito",system-ui,sans-serif;font-size:18px;line-height:1.5;min-height:100vh;
+  background-image:radial-gradient(circle at 12% 18%,rgba(255,201,60,.35) 0 8px,transparent 9px),radial-gradient(circle at 82% 30%,rgba(226,51,75,.25) 0 10px,transparent 11px),radial-gradient(circle at 70% 85%,rgba(63,191,159,.3) 0 7px,transparent 8px);}
+main{max-width:640px;margin:0 auto;padding:32px 20px 60px}
+h1{font-family:"Baloo 2",system-ui,sans-serif;font-weight:800;font-size:clamp(2.4rem,8vw,3.6rem);line-height:1;margin:8px 0 6px;letter-spacing:-.01em}
+.intro{color:var(--soft);margin:0 0 28px;max-width:46ch}
+.brand{display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin-bottom:14px}
+.mark{width:clamp(180px,50vw,240px);height:auto;flex:none;display:block}
+.brand h1{margin:0}
+.tagline{margin:2px 0 0;font-family:"Baloo 2",system-ui,sans-serif;font-weight:600;font-size:1.2rem;color:var(--ribbon)}
+.tag{position:relative;background:var(--card);border-radius:18px 18px 18px 60px;padding:34px 28px 28px;box-shadow:6px 6px 0 var(--ink);border:3px solid var(--ink)}
+.tag::before{content:"";position:absolute;top:22px;left:22px;width:18px;height:18px;border-radius:50%;border:3px solid var(--ink);background:var(--sky)}
+.tag::after{content:"";position:absolute;top:-34px;left:28px;width:3px;height:44px;background:var(--ribbon);transform:rotate(-18deg)}
+.dots{display:flex;gap:8px;justify-content:flex-end;margin-bottom:14px}
+.dots span{width:12px;height:12px;border-radius:50%;background:var(--sky);border:2px solid var(--ink)}
+.dots span.on{background:var(--ribbon)}
+label,.q{display:block;font-family:"Baloo 2",system-ui,sans-serif;font-weight:600;font-size:1.6rem;line-height:1.2;margin:6px 0 4px}
+.hint{color:var(--soft);font-size:.95rem;margin:0 0 14px}
+input,textarea{width:100%;font:inherit;color:var(--ink);background:var(--sky);border:3px solid var(--ink);border-radius:12px;padding:12px 14px}
+textarea{min-height:96px;resize:vertical}
+input:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:4px solid var(--sun);outline-offset:2px}
+.row{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
+button{font-family:"Baloo 2",system-ui,sans-serif;font-weight:800;font-size:1.15rem;border:3px solid var(--ink);border-radius:999px;padding:10px 24px;cursor:pointer;background:var(--ribbon);color:#fff}
+button.back,button.plain{background:transparent;color:var(--ink)}
+button:disabled{opacity:.5;cursor:wait}
+.choices{display:flex;gap:10px;flex-wrap:wrap}
+button.choice{background:var(--sky);color:var(--ink)}
+button.choice[aria-checked="true"]{background:var(--sun);color:#1B2559}
+.err{color:var(--ribbon);font-weight:700;min-height:1.5em;margin:8px 0 0}
+.hidden{display:none !important}
+.results h2{font-family:"Baloo 2",system-ui,sans-serif;font-weight:800;font-size:2rem;line-height:1.1;margin:0 0 6px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 12px}
+.tools button{font-size:1rem;padding:8px 18px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;margin:0 -2px}
+.chip{flex:none;font-size:.95rem;padding:6px 14px;background:var(--sky);color:var(--ink);border-width:2px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--card)}
+.gift{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:2px dashed var(--soft)}
+.gift:first-child{border-top:none}
+.gift.glow{background:rgba(255,201,60,.3);border-radius:12px;padding:14px 10px}
+.emoji{font-size:2rem;line-height:1;flex:none;width:44px;text-align:center}
+.info{flex:1;min-width:0}
+.info b{display:block;font-size:1.1rem}
+.meta{font-size:.9rem;color:var(--soft);font-weight:700}
+.info a{color:var(--ink);font-weight:700;text-decoration-color:var(--ribbon);text-decoration-thickness:3px}
+.heart{flex:none;width:46px;height:46px;padding:0;font-size:1.4rem;background:var(--card);color:var(--ribbon);border-width:2px}
+.heart[aria-pressed="true"]{background:var(--ribbon);color:#fff}
+.colornote{background:var(--sun);color:#1B2559;border-radius:12px;padding:10px 14px;font-weight:700;margin:10px 0 4px}
+.surprise{border:3px solid var(--ink);background:var(--sun);color:#1B2559;border-radius:16px;padding:14px 16px;margin:4px 0 12px}
+.surprise b{font-family:"Baloo 2",system-ui,sans-serif;font-size:1.3rem;display:block}
+.surprise a{color:#1B2559;font-weight:700}
+.empty{color:var(--soft);padding:10px 0}
+@media (prefers-reduced-motion:no-preference){.step{animation:pop .25s ease-out}.surprise{animation:pop .3s ease-out}@keyframes pop{from{transform:scale(.97);opacity:0}to{transform:none;opacity:1}}}
+</style>
+</head>
+<body>
+<main>
+  <header class="brand">
+    <svg class="mark" viewBox="0 0 300 150" role="img" aria-label="Lumi: Gifts kids will love">
+      <rect x="4" y="4" width="292" height="142" rx="30" fill="#E2558F"/>
+      <text x="150" y="88" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="72" fill="#FFFFFF">Lumi</text>
+      <text x="150" y="120" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="400" font-size="18" letter-spacing="1" fill="#FFFFFF">Gifts kids will love</text>
+    </svg>
+  </header>
+  <p class="intro">Tell us about your kid and we'll find gift ideas they'll actually love, for ages 2 to 18.</p>
+
+  <div class="tag" id="card">
+    <div class="dots" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span><span></span><span></span></div>
+
+    <div class="step">
+      <label for="name">What's your child's name?</label>
+      <p class="hint">Just a first name is perfect.</p>
+      <input id="name" autocomplete="off" placeholder="Maya">
+    </div>
+
+    <div class="step hidden">
+      <p class="q" id="gq">What is <span class="kid">your child</span>'s gender?</p>
+      <p class="hint">Pick one.</p>
+      <div class="choices" data-group="gender" role="radiogroup" aria-labelledby="gq">
+        <button type="button" class="choice" data-v="girl" role="radio" aria-checked="false">Girl</button>
+        <button type="button" class="choice" data-v="boy" role="radio" aria-checked="false">Boy</button>
+        <button type="button" class="choice" data-v="" role="radio" aria-checked="false">Rather not say</button>
+      </div>
+    </div>
+
+    <div class="step hidden">
+      <label for="likes">What does <span class="kid">your child</span> like?</label>
+      <p class="hint">Hobbies, shows, characters, favorite colors, anything! Like "unicorns and the color blue".</p>
+      <textarea id="likes" placeholder="unicorns, drawing, the color blue"></textarea>
+    </div>
+
+    <div class="step hidden">
+      <label for="age">How old is <span class="kid">your child</span>?</label>
+      <p class="hint">Any age from 2 to 18.</p>
+      <input id="age" type="number" min="2" max="18" inputmode="numeric" placeholder="9">
+    </div>
+
+    <div class="step hidden">
+      <p class="q" id="bq">How much do you want to spend?</p>
+      <p class="hint">For each gift.</p>
+      <div class="choices" data-group="budget" role="radiogroup" aria-labelledby="bq">
+        <button type="button" class="choice" data-v="under $20" role="radio" aria-checked="false">Under $20</button>
+        <button type="button" class="choice" data-v="under $50" role="radio" aria-checked="false">Under $50</button>
+        <button type="button" class="choice" data-v="under $100" role="radio" aria-checked="false">Under $100</button>
+        <button type="button" class="choice" data-v="any price" role="radio" aria-checked="false">Any price</button>
+      </div>
+    </div>
+
+    <div class="step hidden">
+      <p class="q" id="oq">What's the gift for?</p>
+      <p class="hint">Pick one.</p>
+      <div class="choices" data-group="occasion" role="radiogroup" aria-labelledby="oq">
+        <button type="button" class="choice" data-v="a birthday" role="radio" aria-checked="false">Birthday 🎂</button>
+        <button type="button" class="choice" data-v="a holiday" role="radio" aria-checked="false">Holiday 🎄</button>
+        <button type="button" class="choice" data-v="a reward for doing something great" role="radio" aria-checked="false">Reward ⭐</button>
+        <button type="button" class="choice" data-v="just because" role="radio" aria-checked="false">Just because 💛</button>
+      </div>
+    </div>
+
+    <div class="step hidden results" id="results">
+      <h2 id="rtitle"></h2>
+      <p class="hint" id="rsub"></p>
+      <p class="colornote hidden" id="rcolor"></p>
+      <div class="tools hidden" id="tools">
+        <button type="button" id="surpriseBtn">🎲 Surprise me</button>
+        <button type="button" class="plain" id="favBtn">❤️ My favorites (0)</button>
+      </div>
+      <div id="surprise"></div>
+      <div class="chips" id="chips" role="group" aria-label="Gift type"></div>
+      <div id="list"></div>
+      <div class="row hidden" id="moreRow"><button type="button" id="more">Show more</button></div>
+      <p class="err" id="moreErr"></p>
+    </div>
+
+    <p class="err" id="err" role="alert"></p>
+    <div class="row" id="nav">
+      <button class="back hidden" id="back">Back</button>
+      <button id="next">Next</button>
+    </div>
+  </div>
+</main>
+
+<script>
+const TYPES=["Toys","Clothes","Books","Room decor","School supplies","Arts & crafts","Experiences"];
+const TYPEC={T:"Toys",C:"Clothes",B:"Books",R:"Room decor",S:"School supplies",A:"Arts & crafts",E:"Experiences"};
+const DATA=[
+ {k:["k-pop","kpop","k pop","demon hunter","bts","blackpink","korean"],e:"🎤",c:"K-pop",i:["KPop Demon Hunters doll|T|4|14|25","KPop Demon Hunters T-shirt|C|4|16|18","KPop Demon Hunters hoodie|C|6|18|35","KPop Demon Hunters costume|C|4|12|35","KPop Demon Hunters backpack|S|5|14|30","KPop Demon Hunters stickers and notebook set|S|5|16|12","KPop Demon Hunters poster|R|6|18|15","Kids karaoke microphone with lights|T|4|12|25","Light-up glow stick for concerts|T|6|18|20","K-pop photocard binder|A|9|18|15","Korean snack sampler box|E|8|18|30","K-pop dance class|E|6|18|60","Bluetooth karaoke speaker|T|9|18|45"]},
+ {k:["unicorn","magic","fairy","fantasy","rainbow"],e:"🦄",c:"Unicorns",i:["Unicorn plush|T|2|8|18","Unicorn ride-on rocking toy|T|2|5|60","Unicorn craft kit|A|5|11|20","Unicorn night light|R|2|12|20","Unicorn slippers|C|3|12|18","Unicorn headband and costume|C|3|9|20","Unicorn pajamas|C|3|12|22","Make-your-own fairy garden kit|A|6|12|25","Unicorn water bottle|S|4|14|15","Unicorn chapter books|B|6|10|15","Fantasy dragon drawing book|B|9|15|15","Fantasy novel series box set|B|11|18|45"]},
+ {k:["dinosaur","dino","fossil","t-rex","jurassic"],e:"🦕",c:"Dinosaurs",i:["Dinosaur figures set|T|2|8|20","Remote control dinosaur|T|4|10|35","Dig-up fossil kit|A|5|12|18","Dinosaur encyclopedia|B|6|14|20","Dinosaur pajamas|C|2|10|20","Dinosaur hoodie with spikes|C|3|10|28","Dinosaur wall decals|R|3|10|18","Dinosaur backpack|S|3|10|25","Wooden dinosaur skeleton model|A|8|18|22","Trip to a natural history museum|E|4|18|40"]},
+ {k:["space","planet","star","rocket","astronaut","galaxy","moon"],e:"🚀",c:"Space",i:["Rocket ship toy|T|2|6|25","Glow-in-the-dark star stickers|R|4|14|10","Galaxy star projector lamp|R|6|18|30","Kids telescope|T|7|16|60","Solar system model kit|A|7|14|20","Astronaut costume|C|3|10|30","Space facts book|B|6|12|15","Galaxy print hoodie|C|6|18|30","Moon lamp|R|8|18|25","Planetarium or science center visit|E|5|18|30"]},
+ {k:["art","draw","paint","coloring","craft","creative","sketch","doodle"],e:"🎨",c:"Art",i:["Jumbo washable crayons|A|2|5|10","Easel with chalkboard and whiteboard|A|3|8|50","Art supply case|A|5|12|25","Paint-by-numbers kit|A|8|18|18","Sketchbook and fancy marker set|A|8|18|25","Beginner watercolor set|A|9|18|22","Clay sculpting kit|A|6|14|20","Diamond painting kit|A|8|18|15","How-to-draw book|B|6|14|12","Art class or pottery painting day|E|6|18|40","Light-up drawing tablet|T|4|10|20","Digital drawing tablet|T|12|18|60"]},
+ {k:["music","sing","song","guitar","piano","drum","taylor swift","swiftie","concert"],e:"🎵",c:"Music",i:["Toy drum and shaker set|T|2|5|25","Kids karaoke microphone|T|4|11|20","Ukulele|T|7|18|40","Keyboard piano|T|7|18|80","Kids headphones|T|4|10|25","Wireless headphones|T|11|18|60","Friendship bracelet kit|A|6|18|15","Music note pajamas|C|4|12|20","Record player style speaker|R|12|18|60","Music lessons|E|6|18|80"]},
+ {k:["animal","dog","cat","puppy","kitten","horse","pet","bunny","panda","fox"],e:"🐶",c:"Animals",i:["Animal plush|T|2|9|18","Interactive pet toy|T|4|10|40","Animal fact book|B|5|12|15","Horse stable play set|T|4|10|35","Animal ear headband and hoodie|C|4|14|25","Cute animal pajamas|C|3|14|20","Pet-themed board game|T|6|12|20","Animal pencil case set|S|5|14|12","Animal print fuzzy blanket|R|4|18|25","Zoo or aquarium trip|E|2|18|40","Day volunteering at an animal shelter|E|12|18|0"]},
+ {k:["sport","soccer","football","basketball","baseball","tennis","run","bike","skate","swim"],e:"⚽",c:"Sports",i:["Soft play ball set|T|2|5|15","Mini basketball hoop|T|4|14|30","Soccer ball|T|5|18|20","Scooter with helmet|T|5|12|60","Skateboard with helmet and pads|T|8|18|70","Favorite team jersey|C|4|18|50","Sports water bottle|S|6|18|15","Jump rope and agility set|T|6|16|15","Sports poster|R|8|18|15","Tickets to a sports game|E|6|18|60"]},
+ {k:["read","book","story","stories","librar","write","writing"],e:"📚",c:"Reading",i:["Lift-the-flap picture books|B|2|5|15","Picture book box set|B|3|7|30","Chapter book box set|B|7|11|35","Graphic novel series|B|8|16|30","Reading book light|S|6|18|12","Fun bookmarks set|S|6|18|8","Cozy reading pillow|R|5|18|30","Journal with lock|S|8|16|15","Bookstore gift card|E|5|18|25","E-reader|T|11|18|100"]},
+ {k:["game","gaming","video","minecraft","roblox","fortnite","nintendo","switch","puzzle"],e:"🎮",c:"Games",i:["Chunky jigsaw puzzle|T|2|5|12","Family board game|T|5|18|25","Minecraft LEGO set|T|8|14|35","Minecraft plush|T|4|12|20","Minecraft T-shirt|C|5|14|18","Roblox gift card|E|7|16|25","Video game gift card|E|8|18|25","Brain teaser puzzle cube|T|7|18|10","Gaming headset|T|10|18|50","Light-up gaming room LED strip|R|10|18|25","Game controller charging stand|R|10|18|25"]},
+ {k:["science","experiment","lego","build","robot","coding","engineer","stem","magnet"],e:"🔬",c:"Science",i:["Big building blocks|T|2|5|25","Magnetic tiles set|T|3|10|40","LEGO building set|T|5|14|30","Kitchen science experiment kit|A|6|12|25","Crystal growing kit|A|7|14|18","Build-your-own robot kit|T|8|16|45","Coding robot for kids|T|6|12|60","Microscope for kids|T|8|16|50","Volcano making kit|A|6|12|15","Science museum trip|E|4|18|30"]},
+ {k:["cook","bake","food","kitchen","chef","snack"],e:"🧁",c:"Cooking",i:["Toy kitchen food set|T|2|6|25","Kids baking set with mini tools|A|5|12|30","Kids apron and chef hat|C|4|12|15","Cupcake decorating kit|A|6|18|20","Kids cookbook|B|7|14|15","Waffle or pancake maker|T|10|18|30","Real cookbook for teens|B|12|18|20","Cooking class|E|7|18|50"]},
+ {k:["fashion","makeup","nail","jewelry","bracelet","style","clothes","beauty","hair"],e:"💅",c:"Fashion",i:["Dress-up costume box|C|3|8|35","Bracelet making kit|A|6|14|18","Kids nail polish set|T|6|13|15","Hair accessories set|C|4|14|15","Jewelry box|R|6|18|25","Fashion design sketchbook|A|8|16|15","Cute tote bag|C|10|18|20","Lip gloss and skincare set|T|11|18|20","Sparkly sneakers|C|4|14|40","Trendy hoodie|C|8|18|35"]},
+ {k:["car","truck","train","vehicle","race","racing","tractor","plane","airplane"],e:"🚗",c:"Vehicles",i:["Push-along truck|T|2|5|20","Wooden train track set|T|3|8|40","Toy car garage|T|3|8|35","Remote control car|T|6|16|35","Race car track set|T|5|12|40","Car pajamas|C|2|8|20","Car model kit|A|9|18|25","Race car bed sheets|R|3|10|30","Go-kart or train ride day|E|5|18|30"]},
+ {k:["nature","plant","garden","bug","insect","outdoor","camp","flower","hike","fish"],e:"🌱",c:"Nature",i:["Kids gardening tool set|T|3|10|20","Bug catching kit|T|4|10|18","Grow-your-own plant kit|A|6|18|15","Kids camping lantern|T|5|18|15","Kids binoculars|T|5|14|20","Butterfly growing kit|A|5|12|30","Hiking backpack|C|8|18|35","Nature journal|B|8|18|12","Camping trip|E|6|18|60"]},
+ {k:["princess","doll","barbie","frozen","elsa","disney","dress"],e:"👑",c:"Princesses",i:["Princess dress-up costume|C|3|9|30","Barbie doll set|T|3|10|25","Dollhouse|T|3|10|80","Frozen Elsa doll|T|3|9|20","Princess tiara and wand set|T|3|8|12","Disney princess pajamas|C|3|10|20","Princess canopy for bed|R|3|10|35","Disney storybook collection|B|3|8|20","Disney on Ice tickets|E|3|12|60"]},
+ {k:["superhero","super hero","spider","marvel","batman","avenger","hero"],e:"🦸",c:"Superheroes",i:["Superhero action figures|T|3|10|20","Spider-Man costume|C|3|10|30","Superhero T-shirt|C|4|16|18","Superhero LEGO set|T|6|14|35","Superhero backpack|S|5|12|25","Superhero comic books|B|7|18|20","Superhero wall poster|R|6|18|15","Superhero cape and mask set|C|3|8|15"]},
+ {k:["pokemon","pokémon","pikachu","anime","manga"],e:"⚡",c:"Pokémon & anime",i:["Pokémon plush|T|3|12|20","Pokémon trading cards|T|6|16|15","Pokémon card binder|S|6|16|15","Pokémon T-shirt|C|4|14|18","Pokémon handbook|B|6|12|12","Manga starter set|B|11|18|30","Anime hoodie|C|10|18|35","Anime poster|R|10|18|15"]},
+ {k:["harry potter","hogwarts","wizard","witch","spell"],e:"🪄",c:"Wizards",i:["Wizard wand|T|6|18|15","Harry Potter book set|B|8|18|50","Hogwarts house scarf|C|7|18|20","Wizard robe costume|C|5|12|30","Harry Potter LEGO set|T|8|16|40","Potion making kit|A|6|12|20","Hogwarts house mug|R|10|18|15"]},
+ {k:["mermaid","ocean","shark","whale","sea","beach","dolphin"],e:"🧜",c:"Ocean",i:["Mermaid tail blanket|R|3|14|25","Mermaid doll|T|3|9|20","Shark plush|T|2|12|20","Ocean animals figure set|T|2|7|18","Swim goggles and pool toys|T|4|12|20","Ocean facts book|B|5|12|15","Shark hoodie|C|4|14|28","Aquarium trip|E|2|18|40"]},
+ {k:["dance","ballet","gymnast","cheer","yoga"],e:"🩰",c:"Dance",i:["Ballet tutu and slippers|C|3|9|25","Dance bag|S|5|14|20","Gymnastics mat|T|5|14|60","Kids yoga cards|T|5|12|15","Dance party light-up speaker|T|6|18|30","Leotard|C|4|14|25","Dance class|E|4|18|60"]},
+ {k:["slime","fidget","squish","squishmallow","sensory","stuffie","plush"],e:"🫧",c:"Squishy fun",i:["Squishmallow plush|T|3|18|20","Slime making kit|A|6|13|20","Fidget toy pack|T|5|14|15","Giant squishmallow|R|5|18|40","Kinetic sand set|T|3|9|20","Squishy stress balls|T|5|14|10"]},
+ {k:["bluey","paw patrol","peppa","cocomelon","baby shark","sesame"],e:"🐾",c:"Preschool shows",i:["Bluey plush|T|2|7|18","Bluey house play set|T|3|7|30","Paw Patrol lookout tower|T|3|7|45","Paw Patrol pajamas|C|2|7|20","Peppa Pig storybooks|B|2|6|15","Favorite show T-shirt|C|2|7|15","Character toddler backpack|S|2|6|20"]},
+ {k:["photo","camera","tech","phone","youtube","video","computer"],e:"📷",c:"Tech",i:["Kids instant print camera|T|6|14|50","Kids digital camera|T|5|12|40","Instant camera|T|10|18|70","Phone ring light|T|11|18|25","Portable phone charger|T|12|18|25","Bluetooth speaker|T|8|18|30","Photo string lights with clips|R|8|18|15"]}
+];
+const GENERAL=["Stacking cups|T|2|4|10","Bubble machine|T|2|8|20","Wooden shape puzzle|T|2|4|15","Play tent|T|2|8|35","Cozy plush blanket|R|2|18|25","Sticker book|A|3|10|10","Fun pattern socks|C|3|18|12","Cool backpack|S|5|18|30","Gel pen set|S|7|18|12","Family board game|T|5|18|25","Card game for kids|T|5|14|12","String fairy lights|R|8|18|15","Cozy hoodie|C|4|18|30","Personalized name pillow|R|3|18|25","Water bottle with name|S|5|18|20","Jigsaw puzzle|T|8|18|15","Journal and pen set|S|9|18|15","Gift card to a favorite store|E|10|18|25","Movie night kit with popcorn|E|5|18|20","Trip to a fun park|E|3|18|40"];
+
+let localRest=[];
+let step=0, all=[], shown=0, filter="All", view="results", lastPrompt="", aiSample=null, ctx={};
+const $=id=>document.getElementById(id);
+const steps=[...document.querySelectorAll(".step")];
+const dots=[...document.querySelectorAll(".dots span")];
+const RESULTS=steps.length-1;
+
+let favs=[];
+try{ favs=JSON.parse(localStorage.getItem("giftfinder-favs")||"[]"); if(!Array.isArray(favs)) favs=[]; }catch(e){ favs=[]; }
+function saveFavs(){ try{ localStorage.setItem("giftfinder-favs",JSON.stringify(favs)); }catch(e){} }
+
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function picked(g){const b=document.querySelector(`.choices[data-group="${g}"] .choice[aria-checked="true"]`);return b?b.dataset.v:null;}
+
+function show(){
+  steps.forEach((s,i)=>s.classList.toggle("hidden",i!==step));
+  dots.forEach((d,i)=>d.classList.toggle("on",i<=Math.min(step,dots.length-1)));
+  $("back").classList.toggle("hidden",step===0);
+  $("next").textContent=step===RESULTS-1?"Find gifts":step===RESULTS?"Start over":"Next";
+  $("err").textContent="";
+  const kid=$("name").value.trim()||"your child";
+  document.querySelectorAll(".kid").forEach(k=>k.textContent=kid);
+  const f=steps[step].querySelector("input,textarea,.choice"); if(f&&step!==RESULTS) f.focus();
+}
+
+document.querySelectorAll(".choices").forEach(group=>{
+  group.querySelectorAll(".choice").forEach(b=>b.onclick=()=>{
+    group.querySelectorAll(".choice").forEach(x=>x.setAttribute("aria-checked","false"));
+    b.setAttribute("aria-checked","true");
+    $("err").textContent="";
+  });
+});
+
+function isFav(g){return favs.some(f=>f.name===g.name);}
+function giftHTML(g,i){
+  const q=encodeURIComponent(String(g.search||g.name));
+  const meta=[g.type,g.price?"about "+g.price:""].filter(Boolean).join(", ");
+  return `<div class="gift" id="gift-${i}"><div class="emoji" aria-hidden="true">${esc(g.emoji||"🎁")}</div><div class="info"><b>${esc(g.name)}</b>${meta?`<span class="meta">${esc(meta)}</span>`:""}${g.why?`<span class="hint" style="display:block;margin:0">${esc(g.why)}</span>`:""}<a href="https://www.google.com/search?tbm=shop&q=${q}" target="_blank" rel="noopener">See where to buy it</a></div><button type="button" class="heart" data-i="${i}" aria-pressed="${isFav(g)}" aria-label="Save ${esc(g.name)} to favorites">${isFav(g)?"♥":"♡"}</button></div>`;
+}
+
+function currentList(){ return view==="favs"?favs:all.filter(g=>filter==="All"||g.type===filter); }
+
+function renderList(){
+  $("favBtn").textContent=view==="favs"?"⬅ Back to all gifts":`❤️ My favorites (${favs.length})`;
+  const list=currentList();
+  if(view==="favs"){
+    $("rtitle").textContent="My favorites";
+    $("rsub").textContent=favs.length?"Gifts you saved with the heart.":"";
+  }else{
+    $("rtitle").textContent=`${all.length} gift ideas for ${ctx.name}`;
+    $("rsub").textContent=`For a ${ctx.age}-year-old who likes ${ctx.likesRaw}. Budget: ${ctx.budget}.`;
+  }
+  $("rcolor").classList.toggle("hidden",!(ctx.colorWord&&view!=="favs"));
+  const types=["All",...TYPES.filter(t=>all.some(g=>g.type===t))];
+  $("chips").classList.toggle("hidden",view==="favs"||types.length<3);
+  $("chips").innerHTML=types.map(t=>`<button type="button" class="chip" data-t="${esc(t)}" aria-pressed="${t===filter}">${esc(t)}</button>`).join("");
+  $("chips").querySelectorAll(".chip").forEach(c=>c.onclick=()=>{filter=c.dataset.t;$("surprise").innerHTML="";renderList();});
+  $("list").innerHTML=list.length?list.map((g,i)=>giftHTML(g,i)).join(""):`<p class="empty">${view==="favs"?"No favorites yet. Tap the ♡ on any gift to save it here.":"No gifts of this type yet. Try another button or tap Show more."}</p>`;
+  $("list").querySelectorAll(".heart").forEach(h=>h.onclick=()=>{
+    const g=list[+h.dataset.i];
+    if(isFav(g)) favs=favs.filter(f=>f.name!==g.name); else favs.push(g);
+    saveFavs(); renderList();
+  });
+  $("moreRow").classList.toggle("hidden",!((aiSample||localRest.length)&&view!=="favs"));
+}
+
+function surprise(){
+  const list=currentList();
+  if(!list.length) return;
+  const i=Math.floor(Math.random()*list.length), g=list[i];
+  const q=encodeURIComponent(String(g.search||g.name));
+  $("surprise").innerHTML=`<div class="surprise" role="status">🎉 Surprise pick!<b>${esc(g.emoji||"🎁")} ${esc(g.name)}</b>${g.why?esc(g.why)+" ":""}<a href="https://www.google.com/search?tbm=shop&q=${q}" target="_blank" rel="noopener">See where to buy it</a></div>`;
+  document.querySelectorAll(".gift.glow").forEach(x=>x.classList.remove("glow"));
+  const el=$("gift-"+i); if(el) el.classList.add("glow");
+}
+$("surpriseBtn").onclick=surprise;
+$("favBtn").onclick=()=>{view=view==="favs"?"results":"favs";$("surprise").innerHTML="";renderList();};
+
+function normalize(list){
+  return (Array.isArray(list)?list:[]).filter(g=>g&&g.name).map(g=>({emoji:g.emoji,name:String(g.name),why:g.why,search:g.search,price:g.price,type:TYPES.includes(g.type)?g.type:"Toys"}));
+}
+
+function parseItem(s,e){const [name,t,min,max,price]=s.split("|");return {emoji:e,name,type:TYPEC[t],min:+min,max:+max,p:+price};}
+function localPicks(){
+  const max={"under $20":20,"under $50":50,"under $100":100}[ctx.budget]||Infinity;
+  const likes=ctx.likesRaw.toLowerCase();
+  const ok=g=>ctx.age>=g.min&&ctx.age<=g.max&&g.p<=max;
+  const color=ctx.colors[0]||"";
+  const finish=g=>({emoji:g.emoji,name:g.name,type:g.type,price:g.p?"$"+g.p:"free",
+    why:g.why,search:g.name+(color&&(g.type==="Clothes"||g.type==="Room decor"||g.type==="School supplies")?" "+color:"")+" for "+ctx.age+" year old"});
+  let matched=[];
+  DATA.forEach(cat=>{
+    if(cat.k.some(w=>new RegExp("(^|[^a-z])"+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).test(likes)))
+      cat.i.forEach(s=>{const g=parseItem(s,cat.e);g.why="Great for a kid who loves "+cat.c.toLowerCase()+".";if(ok(g))matched.push(g);});
+  });
+  // mix categories so the first ideas aren't all one kind
+  const byType={};matched.forEach(g=>(byType[g.type]=byType[g.type]||[]).push(g));
+  const mixed=[];let added=true;while(added){added=false;Object.values(byType).forEach(arr=>{if(arr.length){mixed.push(arr.shift());added=true;}});}
+  const general=GENERAL.map(s=>{const g=parseItem(s,"🎁");g.why="A fun gift lots of kids this age enjoy.";return g;}).filter(ok);
+  const seen=new Set();
+  return mixed.concat(general).filter(g=>!seen.has(g.name)&&seen.add(g.name)).map(finish);
+}
+
+const COLORS=["red","orange","yellow","green","blue","purple","pink","black","white","rainbow","teal","gold","silver"];
+
+async function findGifts(){
+  const likesRaw=$("likes").value.trim();
+  const colors=COLORS.filter(c=>likesRaw.toLowerCase().includes(c));
+  ctx={name:$("name").value.trim(),age:parseInt($("age").value,10),likesRaw,colors,colorWord:colors.join(" or "),
+       gender:picked("gender")||"",budget:picked("budget"),occasion:picked("occasion")};
+  all=[]; filter="All"; view="results"; aiSample=null;
+  $("surprise").innerHTML=""; $("moreErr").textContent=""; $("list").innerHTML="";
+  $("tools").classList.add("hidden"); $("chips").classList.add("hidden"); $("moreRow").classList.add("hidden"); $("rcolor").classList.add("hidden");
+  $("rcolor").textContent=`Favorite color: ${ctx.colorWord}! We looked for gifts in that color.`;
+  $("rtitle").textContent=`Finding gifts for ${ctx.name}...`;
+  $("rsub").textContent="Thinking up lots of ideas. This takes a few seconds! 🎁";
+  $("next").disabled=true; $("back").disabled=true;
+  let sample=null;
+  try{ sample=window.claude&&window.claude.use?await window.claude.use("sample"):null; }catch(e){ sample=null; }
+  if(sample){
+    try{
+      const prompt=`You help parents find gifts to buy for their kid.
+Child's name: ${ctx.name}
+${ctx.gender?`Gender: ${ctx.gender}\n`:""}Age: ${ctx.age}
+What they like: ${likesRaw}
+Budget per gift: ${ctx.budget}
+The gift is for: ${ctx.occasion}
+
+Give 15 gift ideas that really match what this child likes. If they mention a movie, show, game, band or character, include real official merch of it (toys, dolls, clothes, school supplies, room decor, books, costumes, accessories). Use their favorite color in ideas where it makes sense. Every idea must fit a ${ctx.age}-year-old: not too babyish, not too grown-up, and safe for that age. Every idea must fit the budget (${ctx.budget}) and suit the occasion (${ctx.occasion}). Mix different kinds of gifts.
+
+Reply with ONLY a JSON array, no other text. Each item: {"emoji":"one emoji","name":"short gift name","why":"one short, simple sentence a kid could read about why it fits","search":"a short shopping search phrase to find it","type":"exactly one of: ${TYPES.join(", ")}","price":"rough price in US dollars, like $15"}`;
+      const list=normalize(await sample.json(prompt,{modelTier:"default"}));
+      if(list.length){ lastPrompt=prompt; aiSample=sample; all=list; }
+    }catch(e){}
+  }
+  if(!all.length){ const lp=localPicks(); all=lp.slice(0,15); localRest=lp.slice(15); } else localRest=[];
+  $("tools").classList.remove("hidden");
+  renderList();
+  $("next").disabled=false; $("back").disabled=false;
+}
+
+$("more").onclick=async()=>{
+  if(!aiSample){ all=all.concat(localRest.splice(0,15)); renderList(); return; }
+  const m=$("more"); m.disabled=true; m.textContent="Finding more..."; $("moreErr").textContent="";
+  try{
+    const p=lastPrompt+`\n\nThe parent already saw these ideas, so give 15 NEW ideas that are different from all of these: ${all.map(g=>g.name).join("; ")}`;
+    const list=normalize(await aiSample.json(p,{modelTier:"default"})).filter(g=>!all.some(a=>a.name===g.name));
+    if(list.length){ all=all.concat(list); renderList(); }
+    else $("moreErr").textContent="Couldn't find more ideas right now. Tap Show more to try again.";
+  }catch(e){ $("moreErr").textContent="Couldn't find more ideas right now. Tap Show more to try again."; }
+  m.disabled=false; m.textContent="Show more";
+};
+
+$("next").onclick=()=>{
+  const need={1:"gender",4:"budget",5:"occasion"};
+  if(step===0&&!$("name").value.trim()){$("err").textContent="Type a name to keep going.";return;}
+  if(need[step]&&picked(need[step])===null){$("err").textContent="Pick one to keep going.";return;}
+  if(step===2&&!$("likes").value.trim()){$("err").textContent="Tell us at least one thing they like.";return;}
+  if(step===3){const a=parseInt($("age").value,10); if(!(a>=2&&a<=18)){$("err").textContent="Pick an age from 2 to 18.";return;}}
+  if(step===RESULTS){["name","likes","age"].forEach(i=>$(i).value="");document.querySelectorAll(".choice").forEach(x=>x.setAttribute("aria-checked","false"));step=0;show();return;}
+  if(step===RESULTS-1) findGifts();
+  step++;show();
+};
+$("back").onclick=()=>{step=Math.max(0,step-1);show();};
+document.addEventListener("keydown",e=>{ if(e.key==="Enter"&&e.target.tagName==="INPUT"){e.preventDefault();$("next").click();} });
+</script>
+</body>
+</html>
